@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <style>
+        fieldset
+        {
+            background-image: url(./2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        label
+        {
+            color: brown;
+        }
+       legend
+       {
+        border: 2px;
+        border-radius: 20px 5px 20px 5px;
+        background-color: red;
+        padding: 5px;
+        text-decoration: whitesmoke;
+       }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Student Info</legend>
+            <table width="100%">
+                <tr>
+                    <td><label for="">Student Name :</label></td>
+                    <td><input type="text" placeholder="Enter the Student Name"></td>
+                    <td><label for="">Father's Name :</label></td>
+                    <td><input type="text" placeholder="Enter the Father's Name"></td>
+                    <td><label for="">Mother's Name :</label></td>
+                    <td><input type="text" placeholder="Enter the Mother's Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Gender :</label></td>
+                    <td>
+                        <input type="radio" name="reddy"><label for="">Male</label>
+                        <input type="radio" name="reddy"><label for="">Female</label>
+                        <input type="radio" name="reddy"><label for="">Others</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Date of Birth :</label></td>
+                    <td><input type="date" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td><label for="">Contact No :</label></td>
+                    <td><input type="number" name="" id="" placeholder="Mobile No"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Email :</label></td>
+                    <td><input type="email" name="" id="" placeholder="Enter your email"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Languages :</label></td>
+                    <td>
+                        <input type="checkbox"><label for="">Telugu</label> <br>
+                        <input type="checkbox"><label for="">English</label><br>
+                        <input type="checkbox"><label for="">Hindi</label><br>
+                        <input type="checkbox"><label for="">Kannada</label><br>
+                        <input type="checkbox"><label for="">Tamil</label><br>
+                        <input type="checkbox"><label for="">Malayalam</label><br>
+                        <input type="checkbox"><label for="">Odiya</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Address :</label></td>
+                    <td><textarea name="" id=""></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="">State :</label></td>
+                    <td>
+                        <select>
+                            <option value="">Select...</option>
+                            <option value="">Andhra Pradesh</option>
+                            <option value="">Karnataka</option>
+                            <option value="">Tamil Nadu</option>
+                            <option value="">Telangana</option>
+                            <option value="">Kerala</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Resume :</label></td>
+                    <td><input type="file" name="" id=""></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="6"><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
