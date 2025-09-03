@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        body {
+            background-color: rgb(241, 235, 235);
+        }
+
+        /* -------------------------------nav bar---------------------------------- */
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 7px;
+            /* border: 2px solid black; */
+            align-items: center;
+            background-color: white;
+        }
+
+        nav>.items>h3 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: blue;
+            font-size: 25px;
+            margin-left: 20px;
+        }
+
+        nav>.items>.bar>input {
+            border: none;
+            outline: none;
+            width: 500px;
+            background-color: transparent;
+            padding: 5px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 18px;
+        }
+
+        nav>.items>.bar {
+            background-color: rgb(236, 248, 248);
+            padding: 0px 20px;
+            border-radius: 10px;
+        }
+
+
+        nav>.items>button {
+            border: none;
+            background: none;
+            font-size: 15px;
+            padding: 10px;
+            position: relative;
+
+        }
+
+        nav>.items>button:hover {
+            background-color: blue;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        nav>.items>a {
+            text-decoration: none;
+            color: black;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        nav>.items>.container {
+            display: none;
+            padding: 5px;
+            width: 220px;
+            border: 1px solid black;
+            position: absolute;
+
+
+        }
+
+        nav>.items>.container>.item1 {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        nav>.items>.container>.item:hover {
+            padding: 5px;
+            background-color: rgb(206, 201, 201);
+        }
+
+        nav>.items>.container>.item {
+            padding: 7px;
+        }
+
+        nav>.items:hover>.container {
+            display: block;
+            border-radius: 7px;
+            background-color: white;
+
+        }
+
+        nav>.items>.container1 {
+            border: 1px solid black;
+            border-radius: 10px;
+            position: relative;
+            right: 20px;
+            width: 200px;
+            background-color: white;
+            padding: 7px;
+        }
+
+        nav>.items>.container1>.items {
+            padding: 7px;
+
+        }
+
+        nav>.items>.container1>.items:hover {
+            background-color: rgb(206, 201, 201);
+
+
+
+        }
+
+        nav>.items>.container1 {
+            display: none;
+            position: absolute;
+    
+        }
+
+        nav>.items:hover>.container1 {
+            display: block;
+            cursor: pointer;
+
+        }
+
+         nav>.items>i
+         {
+            cursor: pointer;
+         }
+        /* ----------------------main bar---------------------------------------- */
+        .container2 {
+
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-evenly;
+            width: 97%;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .container2>.items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container2>.items>img {
+            height: 75px;
+            width: 75px;
+        }
+
+        .container2>.items>h4 {
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 12px;
+        }
+
+        /* ------------container3-------------------------- */
+        .container3 {
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: white;
+            width: 98%;
+            padding: 10px;
+        }
+
+        .container3>.items>img {
+            width: 200px;
+            height: 250px;
+        }
+
+        .container3>.items>h4 {
+            text-align: center;
+        }
+
+        /* ---------------------footer----------------------- */
+        .container4 {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="items">
+            <h3><i>Flipkart</i></h3>
+            <span
+                style="margin-left: 20px; color: gray; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><i>Explore<span
+                        style="color: orange;">plus</span></i> </span>
+        </div>
+        <div class="items">
+            <div class="bar"><i class="bi bi-search"></i><input type="text"
+                    placeholder="Search for Products,Brands and more"></div>
+        </div>
+        <div class="items">
+            <button class="main"><i class="bi bi-person-circle"></i> Login <i id="arrow"
+                    class="bi bi-chevron-down"></i></button>
+            <div class="container">
+                <div class="item1">
+                    <h3><a href="" style="color:black;text-decoration: none;">New Customer?</a></h3>
+                    <h3 style="color: blue;"><a href="">Sign Up</a></h3>
+                </div>
+                <div class="item"><i class="bi bi-person-circle"></i> My Profile </div>
+                <div class="item">Filpkart Plus Zone</div>
+                <div class="item"><i class="bi bi-box"></i> Orders</div>
+                <div class="item"><i class="bi bi-heart"></i> Wishlist</div>
+                <div class="item"><i class="bi bi-gift"></i> Rewards</div>
+                <div class="item"><i class="bi bi-credit-card"></i> Gifts</div>
+            </div>
+        </div>
+        <div class="items">
+            <a href=""><i class="bi bi-cart3"></i> Cart</a>
+        </div>
+        <div class="items">
+            <a href=""><i class="bi bi-shop-window"></i> Become a Seller</a>
+        </div>
+        <div class="items">
+            <i class="bi bi-three-dots-vertical"></i>
+            <div class="container1">
+                <div class="items"><i class="bi bi-bell"></i> Notification Preferences</div>
+                <div class="items"><i class="bi bi-headset"></i> 24/7 Customer Care</div>
+                <div class="items"><i class="bi bi-graph-up"></i> Advertise</div>
+                <div class="items"><i class="bi bi-download"></i> Download App</div>
+            </div>
+        </div>
+    </nav>
+    <div class="container2">
+        <div class="items">
+            <img src="https://www.shutterstock.com/image-vector/delivery-motorbike-icon-on-yellow-260nw-2451150865.jpg"
+                alt="">
+            <h4>Minutes</h4>
+        </div>
+        <div class="items">
+            <img src="data:image/jpeg;base64,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"
+                alt="">
+            <h4>Mobiles & Tablets</h4>
+        </div>
+        <div class="items">
+            <img src="https://previews.123rf.com/images/feedough/feedough1802/feedough180200382/95749900-happy-young-fashion-couple-standing-and-laughing-on-white-background.jpg"
+                alt="">
+            <h4>Fashion</h4>
+        </div>
+        <div class="items">
+            <img src="https://rentalplaza.in/wp-content/uploads/2023/08/Untitled-design-32.jpg" alt="">
+            <h4>Electronics</h4>
+        </div>
+        <div class="items">
+            <img src="https://www.jangirdecor.in/cdn/shop/files/IMG-5480.png?v=1715665379" alt="">
+            <h4>Home & Furniture</h4>
+        </div>
+        <div class="items">
+            <img src="https://m.media-amazon.com/images/I/51lYbJhOmbL._UF1000,1000_QL80_.jpg" alt="">
+            <h4>TV'S & Aplliances</h4>
+        </div>
+        <div class="items">
+            <img src="https://images.vexels.com/media/users/3/145451/isolated/preview/d3ac7e539cba374525f981b102196af2-airplane-taking-off.png"
+                alt="">
+            <h4>Flight Bookings</h4>
+        </div>
+        <div class="items">
+            <img src="https://www.bbassets.com/media/uploads/p/l/40322718_1-dimpy-stuff-teddy-bear-with-heart-pink-love-quote.jpg"
+                alt="">
+            <h4>Beauty,dolls</h4>
+        </div>
+        <div class="items">
+            <img src="https://nammaonlineshop.com/cdn/shop/products/surfexcel.png?v=1595497060" alt="">
+            <h4>Grocery</h4>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="items">
+            <img src="https://i.ebayimg.com/images/g/bsoAAOSwdWxnU~fe/s-l1200.jpg" alt="">
+            <h4>Shirt</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>450/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://outdoorvitals.com/cdn/shop/products/greensatushopify.png?v=1701706579&width=1000" alt="">
+            <h4>Pant</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>500/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://i.ebayimg.com/images/g/6q0AAOSwEYtoAuHG/s-l1200.jpg" alt="">
+            <h4>T-Shirt</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>250/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://cdn.grofers.com/da/cms-assets/cms/product/c54f1411-ea35-4fc1-91d9-5825e87a4a9c.jpg"
+                alt="">
+            <h4>Short</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>200/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2024/8/439527721/IC/WU/WV/49412249/men-casual-wear-ns-lycra-track-pants-500x500.jpg"
+                alt="">
+            <h4>Night Pants</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>650/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://plaeto.in/cdn/shop/files/4_9922fe5c-7af0-42b8-8eab-62b75ad74552.jpg?v=1754980094&width=2000"
+                alt="">
+            <h4>Shoes</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>900/-</h4>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="items">
+            <img src="https://i.ebayimg.com/images/g/bsoAAOSwdWxnU~fe/s-l1200.jpg" alt="">
+            <h4>Shirt</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>450/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://outdoorvitals.com/cdn/shop/products/greensatushopify.png?v=1701706579&width=1000" alt="">
+            <h4>Pant</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>500/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://i.ebayimg.com/images/g/6q0AAOSwEYtoAuHG/s-l1200.jpg" alt="">
+            <h4>T-Shirt</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>250/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://cdn.grofers.com/da/cms-assets/cms/product/c54f1411-ea35-4fc1-91d9-5825e87a4a9c.jpg"
+                alt="">
+            <h4>Short</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>200/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2024/8/439527721/IC/WU/WV/49412249/men-casual-wear-ns-lycra-track-pants-500x500.jpg"
+                alt="">
+            <h4>Night Pants</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>650/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://plaeto.in/cdn/shop/files/4_9922fe5c-7af0-42b8-8eab-62b75ad74552.jpg?v=1754980094&width=2000"
+                alt="">
+            <h4>Shoes</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>900/-</h4>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="items">
+            <img src="https://i.ebayimg.com/images/g/bsoAAOSwdWxnU~fe/s-l1200.jpg" alt="">
+            <h4>Shirt</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>450/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://outdoorvitals.com/cdn/shop/products/greensatushopify.png?v=1701706579&width=1000" alt="">
+            <h4>Pant</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>500/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://i.ebayimg.com/images/g/6q0AAOSwEYtoAuHG/s-l1200.jpg" alt="">
+            <h4>T-Shirt</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>250/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://cdn.grofers.com/da/cms-assets/cms/product/c54f1411-ea35-4fc1-91d9-5825e87a4a9c.jpg"
+                alt="">
+            <h4>Short</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>200/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2024/8/439527721/IC/WU/WV/49412249/men-casual-wear-ns-lycra-track-pants-500x500.jpg"
+                alt="">
+            <h4>Night Pants</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>650/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://plaeto.in/cdn/shop/files/4_9922fe5c-7af0-42b8-8eab-62b75ad74552.jpg?v=1754980094&width=2000"
+                alt="">
+            <h4>Shoes</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>900/-</h4>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="items">
+            <img src="https://i.ebayimg.com/images/g/bsoAAOSwdWxnU~fe/s-l1200.jpg" alt="">
+            <h4>Shirt</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>450/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://outdoorvitals.com/cdn/shop/products/greensatushopify.png?v=1701706579&width=1000" alt="">
+            <h4>Pant</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>500/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://i.ebayimg.com/images/g/6q0AAOSwEYtoAuHG/s-l1200.jpg" alt="">
+            <h4>T-Shirt</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>250/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://cdn.grofers.com/da/cms-assets/cms/product/c54f1411-ea35-4fc1-91d9-5825e87a4a9c.jpg"
+                alt="">
+            <h4>Short</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>200/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2024/8/439527721/IC/WU/WV/49412249/men-casual-wear-ns-lycra-track-pants-500x500.jpg"
+                alt="">
+            <h4>Night Pants</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>650/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://plaeto.in/cdn/shop/files/4_9922fe5c-7af0-42b8-8eab-62b75ad74552.jpg?v=1754980094&width=2000"
+                alt="">
+            <h4>Shoes</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>900/-</h4>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="items">
+            <img src="https://i.ebayimg.com/images/g/bsoAAOSwdWxnU~fe/s-l1200.jpg" alt="">
+            <h4>Shirt</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>450/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://outdoorvitals.com/cdn/shop/products/greensatushopify.png?v=1701706579&width=1000" alt="">
+            <h4>Pant</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>500/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://i.ebayimg.com/images/g/6q0AAOSwEYtoAuHG/s-l1200.jpg" alt="">
+            <h4>T-Shirt</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>250/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://cdn.grofers.com/da/cms-assets/cms/product/c54f1411-ea35-4fc1-91d9-5825e87a4a9c.jpg"
+                alt="">
+            <h4>Short</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>200/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2024/8/439527721/IC/WU/WV/49412249/men-casual-wear-ns-lycra-track-pants-500x500.jpg"
+                alt="">
+            <h4>Night Pants</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>650/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://plaeto.in/cdn/shop/files/4_9922fe5c-7af0-42b8-8eab-62b75ad74552.jpg?v=1754980094&width=2000"
+                alt="">
+            <h4>Shoes</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>900/-</h4>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="items">
+            <img src="https://i.ebayimg.com/images/g/bsoAAOSwdWxnU~fe/s-l1200.jpg" alt="">
+            <h4>Shirt</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>450/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://outdoorvitals.com/cdn/shop/products/greensatushopify.png?v=1701706579&width=1000" alt="">
+            <h4>Pant</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>500/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://i.ebayimg.com/images/g/6q0AAOSwEYtoAuHG/s-l1200.jpg" alt="">
+            <h4>T-Shirt</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>250/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://cdn.grofers.com/da/cms-assets/cms/product/c54f1411-ea35-4fc1-91d9-5825e87a4a9c.jpg"
+                alt="">
+            <h4>Short</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>200/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2024/8/439527721/IC/WU/WV/49412249/men-casual-wear-ns-lycra-track-pants-500x500.jpg"
+                alt="">
+            <h4>Night Pants</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>650/-</h4>
+        </div>
+        <div class="items">
+            <img src="https://plaeto.in/cdn/shop/files/4_9922fe5c-7af0-42b8-8eab-62b75ad74552.jpg?v=1754980094&width=2000"
+                alt="">
+            <h4>Shoes</h4>
+            <h4>Rs <i class="bi bi-currency-rupee"></i>900/-</h4>
+        </div>
+    </div>
+    <footer>
+        <div class="container4">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum maiores illo libero repellendus rerum
+                dolorum doloribus facilis, ex unde inventore earum alias itaque deleniti omnis odio. Facere facilis
+                dolores impedit!
+                Placeat distinctio laborum quaerat, consequuntur reiciendis blanditiis. Rerum exercitationem molestias
+                minus porro, nostrum vitae consequuntur ad, aspernatur hic dolores eveniet blanditiis itaque veniam
+                quod! Quia non eos minima eius culpa!
+                Vero obcaecati deserunt commodi rerum labore! Officia, commodi totam? Non, atque excepturi? Quasi
+                necessitatibus eos, dolorem reprehenderit asperiores temporibus eaque ullam aperiam alias recusandae,
+                amet sint ipsa, tenetur iusto. Dicta.
+                Nihil, ipsum, sed maiores eos necessitatibus dolorum culpa vero odio a libero animi cupiditate explicabo
+                expedita distinctio laboriosam veritatis rem optio, modi doloremque. Distinctio, voluptatem dolore
+                laboriosam iusto quisquam recusandae.
+                Ab nesciunt laborum atque error rem et adipisci omnis, modi quidem voluptates explicabo cupiditate
+                officiis nobis tenetur debitis ducimus libero unde repellendus, ipsum est aliquam ad similique!
+                Voluptate, aut at?</p>
+        </div>
+    </footer>
+</body>
+
+</html>
