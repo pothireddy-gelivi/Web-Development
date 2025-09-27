@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Amazon</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        .container {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFC1wPVyj4JcY11hsp8srj1w5tnvMhM_TBnxLPQnGjT5Lpg25ClY32AotFRXx6adbAW9c&usqp=CAU);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+        }
+        .container1{
+            display: flex;
+        }
+        button{
+            background-color: transparent;
+            border: none;
+        }
+    </style>
+</head>
+
+<body class="text-start">
+    <nav class="navbar navbar-dark bg-danger">
+        <div class="navbar-brand">
+            <h2><i class="bi bi-cart4 m-4"></i>Amazon</h2>
+        </div>
+    </nav>
+    <div class="container1">
+        <div class="container border w-25 mt-5 text-center" style="height: 400px;">
+        <div class="Card">
+            <div class="card-header">
+                <img class="img-fluid p-2" style="width: 180px; height: 230px;"
+                    src="https://d1k8sn41pix00a.cloudfront.net/media/players/photos/AB-de-Villiers-CT17.png" alt="">
+            </div>
+            <div class="card-body">
+
+                <div class="row text-center ">
+                    <div class="col-6">
+                        <div class="btn btn-success" onclick="increment()"><i class="bi bi-hand-thumbs-up-fill" ></i></div>
+                    </div>
+                    <div class="col-6">
+                        <div class="btn btn-danger" onclick="increment1()"><i class="bi bi-hand-thumbs-down-fill"></i></div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-6" id="like-el"><span>0 </span>Likes</div>
+                    <div class="col-6" id="dislike-el"><span>0 </span>Dislikes</div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row text-center">
+                    <div class="col">Total Reactions:- <span id="total-el"> 0</span></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container border w-25 mt-5 text-center" style="height: 400px;">
+        <div class="Card">
+             
+            <div class="card-header">
+                <img class="img-fluid p-2" height="300px" width="200px"
+                    src="https://documents.iplt20.com/ipl/IPLHeadshot2025/2.png" alt="">
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-6"> <h5>Item:-Jersey</h5></div>
+                    <div class="col-6"> <h5>Cost :-<i class="bi bi-currency-rupee"></i>450/-</h5></div>
+                </div>
+               
+                <div class="row  ">
+                    <div class="col-5 text-center">
+                        <div class=""><button><h2 onclick="dec()"><i class="bi bi-dash-circle-fill"></i></h2></button></div>
+                    </div>
+                    <div class="col-2">
+                        <div class="text-center"><h2 id="quantity-el">1</h2></div>
+                    </div>
+                    <div class="col-5 text-center ">
+                        <div class=""><button><h2 onclick="inc()"><i class="bi bi-plus-circle-fill"></i></h2></button></div>
+                    </div>
+                    
+                </div>
+                <!-- <div class="row text-center">
+                    <div class="col-6"><span>34 </span>likes</div>
+                    <div class="col-6"><span>12 </span>Dislikes</div>
+                </div> -->
+            </div>
+            <div class="card-footer">
+                <div class="row text-center">
+                    <div class="col">Total-cost:-<i class="bi bi-currency-rupee"></i><span id="price-el">450</span>/-</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script>
+        let likeEl=document.getElementById("like-el")
+        let dislikeEl=document.getElementById("dislike-el")
+        let totalEl=document.getElementById("total-el")
+        let countl=0
+        let countd=0
+        let count=0
+        // -------------------------------------------------------
+        let quantityEl=document.getElementById("quantity-el")
+        let priceEl=document.getElementById("price-el")
+        let count1=0
+       
+        // ---------------------------------------------------
+      
+        function increment(){
+            countl+=1
+            likeEl.textContent=countl + " Likes"
+            totalEl.textContent=countl+countd
+        }
+        
+        function increment1(){
+            countd+=1
+            dislikeEl.textContent=countd + " Dislikes"
+            totalEl.textContent=countd+countl
+        }
+        // ---------------------------------------------------------------------------------------
+      
+        
+        function dec(){
+            count1-=1
+            quantityEl.textContent=count1
+            priceEl.textContent=count1*450
+            
+        }
+        function inc(){
+            count1+=1
+            quantityEl.textContent=count1
+            priceEl.textContent=count1*450
+        }
+        
+       
+
+    </script>
+</body>
+
+</html>

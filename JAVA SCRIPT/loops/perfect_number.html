@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perfect number</title>
+    <script>
+        function main(){
+            let num=+prompt("Enter the number: ")
+            let dum=num
+            let i=1,s=0
+            while (i<=Math.trunc(num/2)){
+                if (num%i==0)
+                    {
+                        s+=i
+                    }
+                i++
+            }
+            if (num==s)
+                {
+                    console.log("the given number is perfect number.")
+                }
+            else{
+                console.log("the given number is not a perfect number")
+            }
+        }
+        main()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
