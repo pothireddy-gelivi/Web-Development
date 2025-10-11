@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Task-3</title>
+    <style>
+        .container1{
+            width: 500px;
+            height: 400px;
+            border: 2px solid black;
+            padding: 10px;
+            margin: auto;
+            margin-top: 50px;
+            background:linear-gradient(20deg, red, blue);
+            color: aliceblue;
+        }
+        .container2{
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        .cont-21,.cont-22{
+            border: 2px solid black;
+            width: 230px;
+            height: 200px;
+            
+        }
+        .table{
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="row my-3">
+            <div class="col-3 text-end "><label for="">Fruits :</label></div>
+            <div class="col-9 text-start"><input type="text" placeholder="Enter the fruit Name" class="form-control" id="input-value"></div>
+        </div>
+        <div class="container2">
+            <div class="cont-21">
+                <table class="table" id="display-data">
+                   
+                </table>
+            </div>
+            <div class="cont-22 pt-4 ps-2">
+                <button class="btn btn-danger" id="add-down">Add Down</button>
+                <button class="btn btn-primary" id="add-up">Add Up</button>
+            </div>
+        </div>
+        <div>
+            <div class="row my-3">
+                <div class="col-3 text-end ">
+                    <button class="btn btn-info" id="del-first">Del First</button>
+                </div>
+                <div class="col-3 text-start">
+                    <button class="btn btn-success" id="del-last">Del last</button>
+                </div>
+                <div class="col-6"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let input_value= document.getElementById("input-value")
+        let add_down_btn= document.getElementById("add-down")
+        let add_up_btn= document.getElementById("add-up")
+        let del_first_btn= document.getElementById("del-first")
+        let del_last_btn= document.getElementById("del-last")
+        let display_data=document.getElementById("display-data")
+        let fruits=[]
+        add_down_btn.addEventListener("click",()=>{
+            fruits.push(input_value.value=input_value.value)
+            display(fruits)
+            input_value.value=""
+        })
+
+        add_up_btn.addEventListener("click",()=>{
+            fruits.unshift(input_value.value=input_value.value)
+            display(fruits)
+            input_value.value=""
+        })
+
+        del_first_btn.addEventListener("click",()=>{
+            fruits.shift(input_value.value=input_value.value)
+            display(fruits)
+            
+        })
+        del_last_btn.addEventListener("click",()=>{
+            fruits.pop(input_value.value=input_value.value)
+            display(fruits)
+            
+        })
+
+        function display(arr) {
+            let res = ``;
+            arr.forEach((ele) => {
+                res += `
+                 <ul>
+                    <li>${ele}</li>       
+                </ul>
+                `
+            });
+            display_data.innerHTML = res;
+        }
+    </script>
+</body>
+</html>

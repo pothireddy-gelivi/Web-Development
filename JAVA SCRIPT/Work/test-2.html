@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Task-2</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            padding: 20px;
+            height: 200px;
+            width: 400px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="mt-5 m-auto box" id="box">
+        <div class="row mt-5">
+             <div class="col-5 text-center">
+                <button class="btn btn-danger" id="dec" onclick="decrement()">-</button>
+            </div>
+            <div class="col-2 text-center" id="number">0</div>
+            <div class="col-5 text-center">
+                <button class="btn btn-primary" id="inc">+</button>
+            </div>
+           
+        </div>
+    </div>
+    <script>
+        let inc_btn=document.getElementById("inc")
+        let dec_btn=document.getElementById("dec")
+        let num_value=document.getElementById("number")
+        let box_color=document.getElementById("box")
+        count=0
+        inc_btn.addEventListener("click",()=>{
+            let res=count+=1
+            num_value.innerText=res
+            
+        if (res>0){
+               if(res%2==1){
+                box_color.style.background="blue";
+                num_value.style.color="white";
+                }
+            else{
+                box_color.style.background="green";
+                num_value.style.color="white";
+            }
+            }
+        else{
+           if(res==0){
+                box_color.style.background="white";
+                num_value.style.color="black";
+                }
+            else{
+                box_color.style.background="red";
+                num_value.style.color="white";
+            }
+        }
+        })
+        dec_btn.addEventListener("click",()=>{
+            res=count-=1
+            num_value.innerText=res
+            
+        if (res>0){
+               if(res%2==1){
+                box_color.style.background="blue";
+                num_value.style.color="white";
+                }
+            else{
+                box_color.style.background="green";
+                num_value.style.color="white";
+            }
+            }
+        else{
+           if(res==0){
+                box_color.style.background="white";
+                num_value.style.color="black";
+                }
+            else{
+                box_color.style.background="red";
+                num_value.style.color="white";
+            }
+        }
+        })
+
+       
+    </script>
+</body>
+</html>

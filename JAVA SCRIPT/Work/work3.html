@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Document</title>
+    <style>
+        .bg-color {
+            background: linear-gradient(45deg, black, cyan);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-color p-3">
+        <a href="#" class="navbar-brand">Student Portal</a>
+
+    </nav>
+    <section>
+        <div class="row m-5">
+            <div class="col-3">
+                <button class="btn bg-color" id="all-stu">All students</button>
+            </div>
+            <div class="col-3">
+                <button class="btn bg-color" id="male-stu">Male Students</button>
+            </div>
+            <div class="col-3">
+                <button class="btn bg-color" id="female-stu">Female students</button>
+            </div>
+            <div class="col-3">
+                <input type="text" placeholder="Search Here" class="form-control">
+            </div>
+        </div>
+        <div class="w-75 mt-5 m-auto text-center">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script>
+        let students = [
+            { id: 101, name: "reddy", gender: "male" },
+            { id: 102, name: "lachi", gender: "male" },
+            { id: 103, name: "vema", gender: "male" },
+            { id: 104, name: "nandi", gender: "male" },
+            { id: 105, name: "kavya", gender: "female" },
+            { id: 106, name: "pavani", gender: "female" },
+            { id: 107, name: "priya", gender: "female" },
+            { id: 108, name: "dharvikha", gender: "female" },
+            { id: 109, name: "manoj", gender: "male" },
+            { id: 110, name: "jashmitha", gender: "female" }
+        ]
+        let display_data = document.getElementById("data")
+        let all_stu_btn = document.getElementById("all-stu")
+        let male_stu_btn = document.getElementById("male-stu")
+        let female_stu_btn = document.getElementById("female-stu")
+
+        function display(arr) {
+            let res = ``;
+            arr.forEach((ele) => {
+                res += `
+                <tr>
+                    <td>${ele.id}</td>
+                    <td>${ele.name}</td>
+                    <td>${ele.gender}</td>
+                </tr>
+                `
+            });
+            display_data.innerHTML = res;
+        }
+
+        all_stu_btn.addEventListener("click", () => {
+            display(students)
+        })
+        male_stu_btn.addEventListener("click", () => {
+            display(malestudents)
+        })
+
+        female_stu_btn.addEventListener("click", () => {
+            display(femalestudents)
+        })
+
+        let malestudents = students.filter((ele) => {
+            if (ele.gender == "male")
+                return ele
+        })
+        let femalestudents = students.filter((ele) => {
+            if (ele.gender == "female")
+                return ele
+        })
+    </script>
+</body>
+
+</html>
